@@ -235,7 +235,7 @@ I can pull and push from 50 to 3200ASA without losing detail or over softening/s
       splitPath.pop()
       splitPath.forEach(function(directory){
         console.log(directory)
-        var anchor = "<a href=\"https:\/\/rosshudson.co.uk" + directory + "/\" class=\"inherit-colour\">" + directory + "</a>"
+        var anchor = "<a href=\"https:\/\/rosshudson.co.uk/" + directory + "/\" class=\"inherit-colour\">" + directory + "</a>"
 
         if(pathMarkup.includes(directory)){
           path.innerHTML = path.innerHTML.replace(directory, anchor)
