@@ -1,0 +1,9 @@
+<p style="margin-bottom: 5px;">
+  <b>
+    <span class="text-green">guest@<a href="{{ .Site.BaseURL }}" class="text-green">{{ .Site.BaseURL }}</a></span><!--
+    --><span class="text-white">:</span><span class="text-blue">~</span><!--
+    --><span class="text-white" id="path">/{{with .File}}{{ .Dir }}{{if ne .BaseFileName "_index"}}{{ .BaseFileName}}/{{end}}{{end}}</span><!--
+  --></b><!--
+  --><span class="text-white">$</span>
+     <span class="text-white">ls</span>
+</p>

@@ -1,0 +1,30 @@
+{{ define "main" }}
+  {{- partial "ident.html" . -}}
+
+  <div class="half-break" />
+
+  {{ $dirs := .Site.Sections }}
+
+  {{ if (not (eq (len $dirs) 0)) }}
+    <p>
+    {{ range $dirs }}
+        <a href="{{ .Permalink }}" class="dir">{{ .Name }}</a>&emsp;
+    {{ end }}
+    </p>
+    <div class="half-break" />
+  {{ end }}
+
+  {{ range .Data.Pages }}
+    {{ if (ne .Params.hidden true) }}
+      {{ if eq .Type "page"}}
+        <p>
+          <b><a href="{{ .Permalink }}" class="plain-link">{{ .Title }}</a></b>
+          - {{ .Description }}
+          <span class="text-green">
+            <small>{{ .Date.Format "2006-01-02" }}</small>
+          </span>
+        </p>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
