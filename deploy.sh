@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git pull
+sudo git pull
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 

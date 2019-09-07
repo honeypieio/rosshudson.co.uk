@@ -25,7 +25,7 @@
       splitPath.pop()
       splitPath.forEach(function(directory){
         console.log(directory)
-        var anchor = "<a href=\"{{ .Site.BaseURL }}" + directory + "/\" class=\"inherit-colour\">" + directory + "</a>"
+        var anchor = "<a href=\"{{ .Site.BaseURL }}/" + directory + "/\" class=\"inherit-colour\">" + directory + "</a>"
 
         if(pathMarkup.includes(directory)){
           path.innerHTML = path.innerHTML.replace(directory, anchor)
