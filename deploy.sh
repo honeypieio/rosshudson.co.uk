@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo git pull
+sudo git subtree pull --prefix=public https://github.com/honeypieio/rosshudson.co.uk.git gh-pages
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
