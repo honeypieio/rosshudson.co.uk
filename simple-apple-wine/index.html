@@ -172,7 +172,7 @@ Taste the wine - if it&rsquo;s not to your liking, leave it for a month and try 
       splitPath.pop()
       splitPath.forEach(function(directory){
         console.log(directory)
-        var anchor = "<a href=\"https:\/\/rosshudson.co.uk" + directory + "/\" class=\"inherit-colour\">" + directory + "</a>"
+        var anchor = "<a href=\"https:\/\/rosshudson.co.uk/" + directory + "/\" class=\"inherit-colour\">" + directory + "</a>"
 
         if(pathMarkup.includes(directory)){
           path.innerHTML = path.innerHTML.replace(directory, anchor)

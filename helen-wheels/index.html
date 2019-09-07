@@ -186,7 +186,7 @@ As mentioned before a chatbot is one possibility. That would involve installing 
       splitPath.pop()
       splitPath.forEach(function(directory){
         console.log(directory)
-        var anchor = "<a href=\"https:\/\/rosshudson.co.uk" + directory + "/\" class=\"inherit-colour\">" + directory + "</a>"
+        var anchor = "<a href=\"https:\/\/rosshudson.co.uk/" + directory + "/\" class=\"inherit-colour\">" + directory + "</a>"
 
         if(pathMarkup.includes(directory)){
           path.innerHTML = path.innerHTML.replace(directory, anchor)
