@@ -1,0 +1,40 @@
+<center>
+  <a href="{{.Site.BaseURL}}" class="text-white">
+    <h1 class="sidebar-title text-white">{{ .Site.Title }}</h1>
+  </a>
+  <img src="/images/icon.jpg" class="sidebar-icon" />
+  <p class="text-white">{{.Site.Params.tagline}}</p>
+  <a
+    href="https://twitter.com/{{ .Site.Params.twitter }}"
+    title="Follow me on twitter!"
+    class="no-hover-style"
+  >
+    <span style="font-size: 3em; color: white;">
+      <i class="fab fa-twitter-square"></i>
+    </span>
+  </a>
+  <a
+    href="https://github.com/{{ .Site.Params.github }}"
+    title="Check out my GitHub"
+    class="no-hover-style"
+  >
+    <span style="font-size: 3em; color: white;">
+      <i class="fab fa-github-square"></i>
+    </span>
+  </a>
+  <p><a href="https://github.com/honeypieio/ubuntu-term">theme</a></p>
+
+</center>
+
+<div class="bottom">
+  <p class="tagline" id="tagline"></p>
+</div>
+
+<script>
+var taglines = [];
+{{ range .Site.Params.taglines }}
+  taglines.push("{{ . }}")
+{{ end }}
+
+document.getElementById("tagline").innerHTML = taglines[Math.floor(Math.random()*taglines.length)];
+</script>

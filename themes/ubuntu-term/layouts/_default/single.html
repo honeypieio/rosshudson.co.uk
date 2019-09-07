@@ -1,0 +1,8 @@
+{{ define "main" }}
+		{{- partial "ident.html" . -}}
+		<h1 style="margin-bottom: 0;">{{ .Title }}</h1>
+		<p class="text-green" style="margin-top: 5px;">{{ .Date.Format "2006-01-02" }}</p>
+		<div class="text-white" id="content">
+				{{ .Content }}
+		</div>
+{{ end }}
