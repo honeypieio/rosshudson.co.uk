@@ -12,7 +12,7 @@ hugo
 sudo git add -A
 
 # Commit changes.
-msg="rebuilding site `date`"
+msg="Rebuilding site `date`!"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
@@ -21,4 +21,4 @@ sudo git commit -m "$msg"
 
 # Push source and build repos.
 sudo git push origin master
-sudo git subtree push --prefix=public https://github.com/honeypieio/rosshudson.co.uk.git gh-pages
+sudo git push origin `sudo git subtree split --prefix=public master`:gh-pages --force
