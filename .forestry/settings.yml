@@ -19,6 +19,10 @@ sections:
   label: Imaginary landscapes
   create: all
   match: "**/*"
+- type: document
+  path: config.toml
+  label: Site Config
+  match: "**/*"
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
