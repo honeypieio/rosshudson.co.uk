@@ -2,6 +2,7 @@
 title = "LC29 B&W Film Developer Review"
 description = "Experimenting with Ilford's cheapest developer"
 date = "2018-12-29"
+type = "post"
 +++
 
 I've used Ilford LC29 almost exclusively for a year now so I thought it would be a good time to detail my experience with it since there doesn't seem to be much love for it out there.

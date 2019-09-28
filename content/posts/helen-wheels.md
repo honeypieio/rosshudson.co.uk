@@ -2,6 +2,7 @@
 title = "Helen Wheels"
 description = "A talking typewriter"
 date = "2019-02-27"
+type = "post"
 +++
 
 This project started off with the idea of creating a chatbot that speaks through a typewriter. I've not got round to making the chatbot part yet, but I probably will in the future. The major hurdle of course was making the typing work.
