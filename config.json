@@ -4,6 +4,7 @@
   "title": "rosshudson.co.uk",
   "theme": "solar-theme-hugo",
   "paginate": 5,
+  "publishDir": "docs",
   "pygmentsStyle": "solarized-dark",
   "params": {
     "description": "A place for stuff to be",
@@ -19,7 +20,6 @@
     "scheme": "ubuntu"
   },
   "menu": {
-
     "main": [
       {
         "name": "Twitter",

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on rosshudson.co.uk</title>
+    <link>https://rosshudson.co.uk/</link>
+    <description>Recent content in Home on rosshudson.co.uk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 07 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rosshudson.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Takin&#39; Me Away From You Train Chords</title>
+      <link>https://rosshudson.co.uk/posts/taking-me-away-from-you-train/</link>
+      <pubDate>Sat, 07 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/posts/taking-me-away-from-you-train/</guid>
+      <description>A nice little song by a seemingly overlooked folk singer named Len Chandler.
+ These chords are transcribed from his appearance on Pete Seeger&amp;rsquo;s Rainbow Quest which I think is the best recording of the song. Len released a few studio albums during the mid-late 60s but they all sound a bit forced and over-produced to me - the live recordings he appears on are well worth a listen
+While this particular song is more personal and sentimental, he first became known as a protest singer during the civil rights movement.</description>
+    </item>
+    
+    <item>
+      <title>Simple Strawberry Session Mead</title>
+      <link>https://rosshudson.co.uk/posts/simple-strawberry-mead/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/posts/simple-strawberry-mead/</guid>
+      <description>My recipe for a strawberry hydromel (low alcohol mead). Ready to drink in 3-4 weeks.
+ 2kg strawberries
+Frozen or fresh will do. Hull and then chop them into small (~2cm) chunks and place them into a pot. Cover with water and bring to a boil then simmer until the water is a deep red and strawberries have lost most of their colour - about 25 minutes. Strain through a sieve and/or cheesecloth.</description>
+    </item>
+    
+    <item>
+      <title>Simple Apple Wine</title>
+      <link>https://rosshudson.co.uk/posts/simple-apple-wine/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/posts/simple-apple-wine/</guid>
+      <description>Here is my recipe for the simplest, cheapest way to make a nice apple wine. It comes out between 10-12% ABV and tastes pretty good.
+Yields 5l (UK gallon).
+ 5l of apple juice from concentrate
+It shouldn&amp;rsquo;t contain any additives, except ascorbic acid which is just the posh name for vitamin C. In my experience the price/quality doesn&amp;rsquo;t impact on the final product, so I&amp;rsquo;d reccomend just using supermakret own brand.</description>
+    </item>
+    
+    <item>
+      <title>Helen Wheels</title>
+      <link>https://rosshudson.co.uk/posts/helen-wheels/</link>
+      <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/posts/helen-wheels/</guid>
+      <description>This project started off with the idea of creating a chatbot that speaks through a typewriter. I&amp;rsquo;ve not got round to making the chatbot part yet, but I probably will in the future. The major hurdle of course was making the typing work.
+Here it is booting up:
+Your browser does not support the video tag.  Concept The typewriter I got uses matrix polling to determine what keys to type.</description>
+    </item>
+    
+    <item>
+      <title>LC29 B&amp;W Film Developer Review</title>
+      <link>https://rosshudson.co.uk/posts/lc29-review/</link>
+      <pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/posts/lc29-review/</guid>
+      <description>I&amp;rsquo;ve used Ilford LC29 almost exclusively for a year now so I thought it would be a good time to detail my experience with it since there doesn&amp;rsquo;t seem to be much love for it out there.
+I think it&amp;rsquo;s a great solution for most casual photographers - shooting a few rolls a month at varying speeds and not having a lot of time to mess around.
+ It&amp;rsquo;s economical The going rate is around £20 for 500ml.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://rosshudson.co.uk/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

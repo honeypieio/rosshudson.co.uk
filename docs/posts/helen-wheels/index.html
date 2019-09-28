@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Helen Wheels | rosshudson.co.uk</title>
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="A talking typewriter">
+		
+		<link rel="stylesheet" href="https://rosshudson.co.ukcss/hybrid.css">
+		<link rel="stylesheet" href="https://rosshudson.co.ukcss/style.css">
+		<link rel="stylesheet" href="https://rosshudson.co.ukcss/colors-ubuntu.css">
+
+		
+	</head>
+	<body>
+
+		<header id="header">
+			<h1>
+				<h1><a href="https://rosshudson.co.uk">rosshudson.co.uk</a></h1>
+				<p>A place for stuff to be</p>
+			</h1>
+
+		</header>
+
+		<div id="page">
+
+			<div id="sidebar" class="hide-mobile">
+				<nav>
+	
+		<ul class="nav">
+			
+				<li><a href="https://github.com/honeypieio"><span>Github</span></a></li>
+			
+				<li><a rel="me" href="https://twitter.com/hossrudson"><span>Twitter</span></a></li>
+			
+				<li><a href="/contact"><span>Contact</span></a></li>
+			
+		</ul>
+	
+</nav>
+
+			</div>
+
+			<div id="content">
+				
+	<article class="post">
+		<h1>Helen Wheels</h1>
+		<div class="post-content">
+
+<p>This project started off with the idea of creating a chatbot that speaks through a typewriter. I&rsquo;ve not got round to making the chatbot part yet, but I probably will in the future. The major hurdle of course was making the typing work.</p>
+
+<p>Here it is booting up:</p>
+
+<video width="50%" controls>
+  <source src="/images/helen-wheels/working.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<h3 id="concept">Concept</h3>
+
+<p>The typewriter I got uses matrix polling to determine what keys to type.</p>
+
+<p>This means that it has two 8 bit buses - a scan bus and a return bus. Each line of the scan bus is &ldquo;probed&rdquo; several times a second. The other circuitry in the typewriter then detects what active scan line(s) are grounded through which return line(s). Essentially, each character you can type corresponds with a combination of lines shorted together.</p>
+
+<h3 id="circuitry">Circuitry</h3>
+
+<p>So in able to simulate these lines being shorted together, I opted to created 2 &ldquo;arrays&rdquo; of N-channel MOSFETs, with their drains and sources commoned together.</p>
+
+<p><img src="/images/helen-wheels/mosfet-configuration.png" /></p>
+
+<p>This meant I could control the current flow between whatever scan and return lines I wanted. To bias (&ldquo;turn on&rdquo;) the MOSFETs, I used two 74HC595N shift registers. I fed the shift registers the data via a Raspberry Pi Zero</p>
+
+<p><img src="/images/helen-wheels/circuitry.jpg" /></p>
+
+<p><small>Note: the resistors are to pulldown any floating grounds</small></p>
+
+<p>On the typewriter&rsquo;s board, I desoldered the edge connector that the original keyboard slotted into and repaced it with standard 0.1&rdquo; male dupont connectors. Then I tapped the rectified side of the main input diode bridge and used a 5v buck converter to power the RPi and the shift registers.</p>
+
+<p><img src="/images/helen-wheels/typewriter-board.jpg" /></p>
+
+<p>Here is all the circuitry put together.</p>
+
+<p><img src="/images/helen-wheels/in-case.jpg" /></p>
+
+<h3 id="code">Code</h3>
+
+<p>I took the membrane out of the keyboard and took photos of each side, as well as the keyboard layout itself. I then put these images into photoshop and traced out what combination of lines corresponded with what keys. From this I created a <a href="https://github.com/honeypieio/helen-wheels/blob/master/type/keymap.py">keymap</a>.</p>
+
+<p>For example the character &ldquo;o&rdquo; has the following lines active on the scan and return buses respectively (represented as two bytes):</p>
+
+<p>00001000
+00000100</p>
+
+<p>I then wrote the program that utilises this data.</p>
+
+<p>It iterates through each character in the string to be typed and finds the corresponding bytes from the keymap, then shifts them out to both registers.</p>
+
+<p>I found the optimum keying delay was 0.05 seconds, which is pretty fast!</p>
+
+<p><a href="https://github.com/honeypieio/helen-wheels">Here&rsquo;s the source code if you&rsquo;re interested</a>.</p>
+
+<hr />
+
+<p>Here it is at full speed typing out a test sentence:</p>
+
+<video width="50%" controls>
+  <source src="/images/helen-wheels/over-and-over.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<h3 id="now-what">Now What?</h3>
+
+<p>I have a few ideas on how to use this.
+As mentioned before a chatbot is one possibility. That would involve installing a microphone, which can be complicated with a Raspberry Pi as it only has digital inputs&hellip;</p>
+
+<p>Another idea would be using a machine learning corpus to make it automatically type out stupid, made-up poems or movie scripts</p>
+
+<p>Essentially anything that prints to the screen can co-opt the program I&rsquo;ve written to type its output on the typewriter rather than a console or a file.</p>
+</div>
+		<p class="meta">Posted on <span class="postdate">27. February 2019</span></p>
+	</article>
+
+			</div>
+
+			<footer id="footer">
+				<p class="copyright text-center">
+					
+						The walrus was P️aul
+					
+				</p>
+			</footer>
+		</div>
+
+		
+	</body>
+</html>
