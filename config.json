@@ -35,6 +35,16 @@
         "name": "Contact",
         "url": "/contact",
         "weight": 3
+      },
+      {
+        "name": "Talking Heads Chords",
+        "url": "https://talking-heads.rosshudson.co.uk",
+        "weight": 4
+      },
+      {
+        "name": "Imaginary Landscapes",
+        "url": "https://imaginary-landscapes.rosshudson.co.uk",
+        "weight": 5
       }
     ]
   }
