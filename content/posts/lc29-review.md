@@ -58,6 +58,6 @@ These are the times I use, based on experimentation. All at room temperature (~2
 
 ### Samples (hover for info)
 
-![HP5+ at 3200ASA - Mamiya C220 w/ 80mm (reconstructed 120 negative)](/images/lc29-review/jack.png)
-![Kodak ColorPlus 200ASA - Canon EOS 500N w/ kit lens](/images/lc29-review/c41.png)
-![Kodak XX at 250ASA - FED 3 Model B w/ 52mm](/images/lc29-review/double-x.png)
+<img src="/images/lc29-review/jack.png" title="HP5+ at 3200ASA - Mamiya C220 w/ 80mm (reconstructed 120 negative)" />
+<img src="/images/lc29-review/c41.png" title="Kodak ColorPlus 200ASA - Canon EOS 500N w/ kit lens" />
+<img src="/images/lc29-review/double-x.png" title="Kodak XX at 250ASA - FED 3 Model B w/ 52mm" />
