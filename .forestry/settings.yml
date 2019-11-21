@@ -5,18 +5,8 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: content
+  path: content/posts
   label: Pages
-  create: all
-  match: "*"
-- type: directory
-  path: content/chords
-  label: Chords
-  create: all
-  match: "**/*"
-- type: directory
-  path: content/imaginary-landscapes
-  label: Imaginary landscapes
   create: all
   match: "**/*"
 - type: document
