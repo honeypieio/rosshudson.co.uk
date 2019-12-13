@@ -74,7 +74,7 @@ Using a pair of pliers to hold the pin back, reflow the central pad and place th
 
 ![](/images/soldering-7.jpg)
 
-To form the switch, bend its leads perpendicular with a pair of piers/blunt snips
+To form the switch, bend its leads perpendicular with a pair of pliers/blunt snips
 
 ![](/images/dip-switch-bend.jpg)  
 Position the switch then tack one end and reflow both sides with a generous amount of solder to make a strong mechanical bond. A dab of super glue on the right side of the switch will also help with this.
