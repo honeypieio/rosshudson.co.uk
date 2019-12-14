@@ -1,5 +1,5 @@
 +++
-date = 2019-11-21T00:00:00Z
+date = 2019-12-14T00:00:00Z
 description = "PCB layouts and instructions for making your very own off-brand Winkie."
 title = "Wankie: How To Make Your Own Off-Brand Winkie"
 type = "post"
@@ -59,56 +59,62 @@ It's a bit unorthodox but it is made out of widely-available, standard parts - m
 
 Since it's a bit weird and not so obvious from the layout, I'll go through each step of construction (I'll assume you have a blank PCB ready to go).
 
-1. Apply a light layer of PCB varnish to the front - it'll make it last longer. Clear nail varnish works too.
-2. Solder the largest pads for the negative cell contacts and the pin back.
+1\. Apply a light layer of PCB varnish to the front - it'll make it last longer. Clear nail varnish works too.
+
+2\. Solder the largest pads for the negative cell contacts and the pin back.
 
 ![](/images/soldering-1.jpg)
 
-1. Solder the 0 ohm link and the capacitor. If you're using a soldering iron, to make them sit flush to the board you can tin the pads then use some solder wick to make the pad flat. Tack one lead on and solder other lead then reflow the first lead again.
+3\. Solder the 0 ohm link and the capacitor. If you're using a soldering iron, to make them sit flush to the board you can tin the pads then use some solder wick to make the pad flat. Tack one lead on and solder other lead then reflow the first lead again.
 
 ![](/images/soldering-2.jpg)
 
-1. Prepare the resistors by cropping each lead to about 4mm. Then solder them to the board.
+4\. Prepare the resistors by cropping each lead to about 4mm. Then solder them to the board.
 
 ![](/images/cropped resistor.jpg)
 
 ![](/images/soldering-3.jpg)
 
-1. Solder the 555 timer. Tin the pads then tack two diagonal pins then reflow all eight pins.
+5\. Solder the 555 timer. Tin the pads then tack two diagonal pins then reflow all eight pins.
 
 ![](/images/soldering-4.jpg)  
+
 6\. Prepare the pads for the cell holders by tinning them and using solder wick to make them flat.
 
 ![](/images/soldering-5.jpg)
 
-1. Form the leads of the cell holders by gently bending them perpendicular to the body with a pair of small pliers/blunt snips. Crop off the excess. Surface mount versions do exist but I couldn't find them - use them if you can!
+7\. Form the leads of the cell holders by gently bending them perpendicular to the body with a pair of small pliers/blunt snips. Crop off the excess. Surface mount versions do exist but I couldn't find them - use them if you can!
 
 ![](/images/cell-holder-folded.jpg)  
+
 8\. Position the cell holder centred with a pair of pliers and flow **lots** of solder on each lead. They'll be under a lot of mechanical strain when the cells are in them!
 
 ![](/images/soldering-6.jpg)  
+
 9\. To make the pin back, crop one of them to about 4mm then tin the flat side of each. Hold them flush together and place your iron on the cropped side. A hot iron will make this much easier!
 
 ![](/images/pin-back-assembly.jpg)  
+
 10\. Using a pair of pliers to hold the pin back, reflow the central pad and place the pin back in the centre.
 
 ![](/images/soldering-7.jpg)
 
-1. Form the leads of the switch by bending them perpendicular to the body with a pair of pliers/blunt snips
+11\. Form the leads of the switch by bending them perpendicular to the body with a pair of pliers/blunt snips
 
 ![](/images/dip-switch-bend.jpg)  
+
 12\. Position the switch then tack one end and reflow both sides with a generous amount of solder to make a strong mechanical bond. A dab of super glue on the right side of the switch will also help with this.
 
-1. Solder the LEDs. Make sure they're flush on front facing side. It should now work!
+13\. Solder the LEDs. Make sure they're flush on front facing side. It should now work!
 
 ![](/images/soldering-8.jpg)
 
-1. Prepare the struts by cutting them out from your transparency sheet and cutting four small rectangles of aluminium foil onto a paper towel. The foil bits don't need to be exact - you can crop the edges later with a pair of scissors.  
+14\. Prepare the struts by cutting them out from your transparency sheet and cutting four small rectangles of aluminium foil onto a paper towel. The foil bits don't need to be exact - you can crop the edges later with a pair of scissors.  
    Make a small pool of superglue on the paper towel, then drag the end of each struts through the glue and place it on top of a piece of foil. It should pick it up.
 
 ![](/images/tabs.jpg)
 
-1. Attach the struts by placing them into position (where the foil touches the two corner contacts on each side as shown). Then place a bead of superglue in the middle of the struts and leave to dry.
+15\. Attach the struts by placing them into position (where the foil touches the two corner contacts on each side as shown). Then place a bead of superglue in the middle of the struts and leave to dry.
 
 ![](/images/final-circuit-side.jpg)
 
