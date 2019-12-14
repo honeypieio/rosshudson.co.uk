@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta
+		  name="viewport"
+		  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+		/>
+		<meta charset="UTF-8" />
+
+		<title>Wankie: How To Make Your Own Off-Brand Winkie | rosshudson.co.uk</title>
+
+		<meta name="description" content="PCB layouts and instructions for making your very own off-brand Winkie.">
+		
+		<link rel="stylesheet" href="https://rosshudson.co.uk/css/hybrid.css">
+		<link rel="stylesheet" href="https://rosshudson.co.uk/css/style.css">
+		<link rel="stylesheet" href="https://rosshudson.co.uk/css/colors-ubuntu.css">
+
+		
+	</head>
+	<body>
+
+		<header id="header">
+			<h1>
+				<h1><a href="https://rosshudson.co.uk/">rosshudson.co.uk</a></h1>
+				<p>A place for stuff to be</p>
+			</h1>
+
+		</header>
+
+		<div id="page">
+
+			<div id="sidebar" class="hide-mobile">
+				<nav>
+	
+		<ul class="nav">
+			
+				<li><a href="https://github.com/honeypieio"><span>Github</span></a></li>
+			
+				<li><a rel="me" href="https://twitter.com/hossrudson"><span>Twitter</span></a></li>
+			
+				<li><a href="/contact"><span>Contact</span></a></li>
+			
+				<li><a href="https://talking-heads.rosshudson.co.uk"><span>Talking Heads Chords</span></a></li>
+			
+				<li><a href="https://imaginary-landscapes.rosshudson.co.uk"><span>Imaginary Landscapes</span></a></li>
+			
+		</ul>
+	
+</nav>
+
+			</div>
+
+			<div id="content">
+				
+	<article class="post">
+		<h1>Wankie: How To Make Your Own Off-Brand Winkie</h1>
+		<div class="post-content">
+
+<p>On <a href="https://www.thecheapshow.co.uk/ep-114-winkie">Ep. 114 of CheapShow</a>, Paul and Eli found a <a href="https://soundcloud.com/france80officiel/winkie-winkie-le-clin-doeil-electronique">bizarre French single</a> promoting a failed electronic pin badge called Winkie.</p>
+
+<p>It&rsquo;s just a badge that alternates between a red and green LED every second. It sounds incredibly dull but somehow it&rsquo;s not.</p>
+
+<p>I found myself so far down the rabbit hole, I decided to design a clone.</p>
+
+<p>I present to you, Wankie:</p>
+
+<p><img src="/images/finished-product.jpg" alt="" /></p>
+
+<p>This post will go through how I designed it and how to make your own (if you can etch your own circuit boards&hellip;)</p>
+
+<h3 id="design">Design</h3>
+
+<p>I&rsquo;ve never actually seen a Winkie with my own eyes so the entire design is based on what little info there is online. The most useful source was an <a href="https://www.youtube.com/watch?v=bVtuyyX0Aeg">episode of Digitiser</a>, where Paul shows a close up of the bottom side. It runs off of two small coin cells, probably LR44s;  assuming 5mm LEDs it appears to be 40x40mm; there&rsquo;s a plastic ring that shorts connections on the corners of the board that influence the winking.</p>
+
+<p>From this the Wankie must:</p>
+
+<ul>
+<li>Blink two LEDs</li>
+<li>Be 40x40mm</li>
+<li>Run off of two LR44 cells</li>
+<li>Have some &ldquo;random&rdquo; influence in the form of conductive tabs on each corner</li>
+</ul>
+
+<p>To achieve this I based my design on a generic 555 timer LED blinker circuit, but using an LMC555 - a low-power CMOS 555 timer that can run on 3V.</p>
+
+<p>For the &ldquo;randomness&rdquo; effect, the output pin loops around the whole board with either a ground or 3V connection next to it on each corner. Conductive tabs, made of aluminium foil glued to struts, then short these together when pressed which overrides the output&rsquo;s influence and lights only one LED. So when you&rsquo;re wearing the badge it occasionally deviates from lighting alternate LEDs every second.</p>
+
+<p>The design on the front is based on a cleaned up version of the single sleeve by <a href="https://twitter.com/Ivenne_NL">Ivenne</a> (the creator of the <a href="https://www.cheapmag.shop/">CheapShow Magazine</a>!). By using a double-sided circuit board the design and circuit can both etched at the same time.</p>
+
+<h3 id="pcb-layout">PCB Layout</h3>
+
+<p><img src="/images/pcb-layout-annotated.jpg" alt="" /></p>
+
+<p>I used a mix of surface mount and through hole components, simply because it&rsquo;s what I had lying around.</p>
+
+<p>The link below is a PDF with the front design and circuit layout to scale for an A4 page. It also includes an outline for the struts.</p>
+
+<p><a href="https://drive.google.com/file/d/1G-mmLmWoUyeC-S6W-NTwl_hBmtrIUGoF/view?usp=sharing" title="PCB Layout">PCB Layout</a></p>
+
+<p>I won&rsquo;t go into detail how to etch boards at home but here&rsquo;s a few tips for photo-etching a double sided board:</p>
+
+<ul>
+<li>To make sure both sides are aligned properly, leave a leader of about 25mm at the top and bottom of both transparencies. Line both transparencies up whilst holding them flat and taut, then tape or staple <strong>each</strong> leader together.</li>
+<li>Cut off a small corner of your transparencies and the laminate. This means you can be sure you&rsquo;re exposing it the the same way round on each side, it can be easy to lose track of orientation when flipping the board over and peeling off the protective film.</li>
+</ul>
+
+<h3 id="materials">Materials</h3>
+
+<p>It&rsquo;s a bit unorthodox but it is made out of widely-available, standard parts - maybe just not the standard way of using them. Here&rsquo;s a list of what you need:</p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1p3rOqLWnDMtnXX7NXCRcTw4L4Kr5cC3prt3LqJf37A0/edit?usp=sharing" title="Bill of Materials">Bill of Materials</a></p>
+
+<h3 id="instructions">Instructions</h3>
+
+<p>Since it&rsquo;s a bit weird and not so obvious from the layout, I&rsquo;ll go through each step of construction (I&rsquo;ll assume you have a blank PCB ready to go).</p>
+
+<ol>
+<li>Apply a light layer of PCB varnish to the front - it&rsquo;ll make it last longer. Clear nail varnish works too.</li>
+<li>Solder the largest pads for the negative cell contacts and the pin back.</li>
+</ol>
+
+<p><img src="/images/soldering-1.jpg" alt="" /></p>
+
+<ol>
+<li>Solder the 0 ohm link and the capacitor. If you&rsquo;re using a soldering iron, to make them sit flush to the board you can tin the pads then use some solder wick to make the pad flat. Tack one lead on and solder other lead then reflow the first lead again.</li>
+</ol>
+
+<p><img src="/images/soldering-2.jpg" alt="" /></p>
+
+<ol>
+<li>Prepare the resistors by cropping each lead to about 4mm. Then solder them to the board.</li>
+</ol>
+
+<p><img src="/images/cropped resistor.jpg" alt="" /></p>
+
+<p><img src="/images/soldering-3.jpg" alt="" /></p>
+
+<ol>
+<li>Solder the 555 timer. Tin the pads then tack two diagonal pins then reflow all eight pins.</li>
+</ol>
+
+<p><img src="/images/soldering-4.jpg" alt="" /><br />
+6. Prepare the pads for the cell holders by tinning them and using solder wick to make them flat.</p>
+
+<p><img src="/images/soldering-5.jpg" alt="" /></p>
+
+<ol>
+<li>Form the leads of the cell holders by gently bending them perpendicular to the body with a pair of small pliers/blunt snips. Crop off the excess. Surface mount versions do exist but I couldn&rsquo;t find them - use them if you can!</li>
+</ol>
+
+<p><img src="/images/cell-holder-folded.jpg" alt="" /><br />
+8. Position the cell holder centred with a pair of pliers and flow <strong>lots</strong> of solder on each lead. They&rsquo;ll be under a lot of mechanical strain when the cells are in them!</p>
+
+<p><img src="/images/soldering-6.jpg" alt="" /><br />
+9. To make the pin back, crop one of them to about 4mm then tin the flat side of each. Hold them flush together and place your iron on the cropped side. A hot iron will make this much easier!</p>
+
+<p><img src="/images/pin-back-assembly.jpg" alt="" /><br />
+10. Using a pair of pliers to hold the pin back, reflow the central pad and place the pin back in the centre.</p>
+
+<p><img src="/images/soldering-7.jpg" alt="" /></p>
+
+<ol>
+<li>Form the leads of the switch by bending them perpendicular to the body with a pair of pliers/blunt snips</li>
+</ol>
+
+<p><img src="/images/dip-switch-bend.jpg" alt="" /><br />
+12. Position the switch then tack one end and reflow both sides with a generous amount of solder to make a strong mechanical bond. A dab of super glue on the right side of the switch will also help with this.</p>
+
+<ol>
+<li>Solder the LEDs. Make sure they&rsquo;re flush on front facing side. It should now work!</li>
+</ol>
+
+<p><img src="/images/soldering-8.jpg" alt="" /></p>
+
+<ol>
+<li>Prepare the struts by cutting them out from your transparency sheet and cutting four small rectangles of aluminium foil onto a paper towel. The foil bits don&rsquo;t need to be exact - you can crop the edges later with a pair of scissors.<br />
+Make a small pool of superglue on the paper towel, then drag the end of each struts through the glue and place it on top of a piece of foil. It should pick it up.</li>
+</ol>
+
+<p><img src="/images/tabs.jpg" alt="" /></p>
+
+<ol>
+<li>Attach the struts by placing them into position (where the foil touches the two corner contacts on each side as shown). Then place a bead of superglue in the middle of the struts and leave to dry.</li>
+</ol>
+
+<p><img src="/images/final-circuit-side.jpg" alt="" /></p>
+
+<p>You have made your very own Wankie!</p>
+
+<p>If you have any questions or issues - <a href="/contact">let me know</a>!</p>
+</div>
+		<p class="meta">Posted on <span class="postdate">21. November 2019</span></p>
+	</article>
+
+			</div>
+
+			<footer id="footer">
+				<p class="copyright text-center">
+					
+						&#34;It came in a vision – a man appeared on a flaming pie and said unto them, &#39;from this day on you are Beatles with an A.&#39;&#34;
+					
+				</p>
+			</footer>
+		</div>
+
+		
+	</body>
+</html>

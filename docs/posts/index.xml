@@ -6,10 +6,23 @@
     <description>Recent content in Posts on rosshudson.co.uk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 07 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rosshudson.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wankie: How To Make Your Own Off-Brand Winkie</title>
+      <link>https://rosshudson.co.uk/posts/wankie/</link>
+      <pubDate>Thu, 21 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/posts/wankie/</guid>
+      <description>On Ep. 114 of CheapShow, Paul and Eli found a bizarre French single promoting a failed electronic pin badge called Winkie.
+It&amp;rsquo;s just a badge that alternates between a red and green LED every second. It sounds incredibly dull but somehow it&amp;rsquo;s not.
+I found myself so far down the rabbit hole, I decided to design a clone.
+I present to you, Wankie:
+This post will go through how I designed it and how to make your own (if you can etch your own circuit boards&amp;hellip;)</description>
+    </item>
     
     <item>
       <title>Takin&#39; Me Away From You Train Chords</title>
