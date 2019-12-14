@@ -86,4 +86,15 @@ Since it's a bit weird and not so obvious from the layout, I'll go through each 
 
 ![](/images/soldering-8.jpg)
 
-![](/images/tabs.jpg)![](/images/final-circuit-side.jpg)
+14. Prepare the tabs by cutting the __ from your transparency sheet and cutting four small rectangles of aluminium foil onto a paper towel. The foil bits don't need to be exact - you can crop the edges later with a pair of scissors.   
+    Make a small pool of superglue on the paper towel, then drag the end of each __ through the glue and place it on top of a piece of foil. It should pick it up.
+
+![](/images/tabs.jpg)
+
+15. Attach the __ by placing them into position (where the foil touches the two corner contacts on each side as shown). Then place a bead of superglue in the middle of the __.
+
+![](/images/final-circuit-side.jpg)
+
+You have made your very own Wankie!
+
+If you have any questions or have any issues, please get in touch. 
