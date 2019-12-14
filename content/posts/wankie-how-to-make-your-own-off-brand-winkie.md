@@ -6,9 +6,11 @@ title = "Wankie: How To Make Your Own Off-Brand Winkie"
 type = "post"
 
 +++
-On [Ep. 114 of Cheapshow](https://www.thecheapshow.co.uk/ep-114-winkie), Paul and Eli found a bizarre French single promoting a failed electronic pin badge called Winkie. It sounds incredibly dull, but it's really not - I've since become obsessed with it.
+On [Ep. 114 of Cheapshow](https://www.thecheapshow.co.uk/ep-114-winkie), Paul and Eli found a bizarre French single promoting a failed electronic pin badge called Winkie. 
 
-As it turns out they're quite pricey and rare, so I decided to make my own off-brand version dubbed Wankie:
+I
+
+It sounds incredibly dull, but it's really not - I've since become obsessed with it.
 
 ![](/images/finished-product.jpg)
 
