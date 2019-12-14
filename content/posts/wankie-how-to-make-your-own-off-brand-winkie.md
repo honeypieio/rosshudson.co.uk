@@ -30,7 +30,7 @@ From this the Wankie must:
 
 To achieve this I based my design on a generic 555 timer LED blinker circuit, but using an LMC555 - a low-power CMOS 555 timer that can run on 3V.
 
-For the "randomness" effect, the output pin loops around the whole board with either a ground or 3V connection next to it on each corner. Conductive tabs, made of aluminium foil glued to struts, then short these together when pressed which overrides the outputs influence and lights only one LED. So when you're wearing the badge it occasionally deviates from lighting alternate LEDs every second.
+For the "randomness" effect, the output pin loops around the whole board with either a ground or 3V connection next to it on each corner. Conductive tabs, made of aluminium foil glued to struts, then short these together when pressed which overrides the output's influence and lights only one LED. So when you're wearing the badge it occasionally deviates from lighting alternate LEDs every second.
 
 The design on the front is based on a cleaned up version of the single sleeve by [Ivenne](https://twitter.com/Ivenne_NL) (the creator of the [CheapShow Magazine](https://www.cheapmag.shop/)). By using a double-sided circuit board the design and circuit can both etched at the same time.
 
