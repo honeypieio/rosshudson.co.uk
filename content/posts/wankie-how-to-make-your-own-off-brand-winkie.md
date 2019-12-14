@@ -1,26 +1,25 @@
 +++
 date = 2019-11-21T00:00:00Z
 description = "PCB layouts and instructions for making your very own off-brand Winkie."
-draft = true
 title = "Wankie: How To Make Your Own Off-Brand Winkie"
 type = "post"
 
 +++
-On [Ep. 114 of Cheapshow](https://www.thecheapshow.co.uk/ep-114-winkie), Paul and Eli found a bizarre French single promoting a failed electronic pin badge called Winkie.
+On [Ep. 114 of CheapShow](https://www.thecheapshow.co.uk/ep-114-winkie), Paul and Eli found a [bizarre French single](https://soundcloud.com/france80officiel/winkie-winkie-le-clin-doeil-electronique) promoting a failed electronic pin badge called Winkie.
 
-It's just a badge that winks a red and green LED
+It's just a badge that alternates between a red and green LED every second. It sounds incredibly dull but somehow it's not.
 
-I went and made my own clone.
+I found myself so far down the rabbit hole, I decided to design a clone.
 
 I present to you, Wankie:
 
 ![](/images/finished-product.jpg)
 
-This post will go through how I designed it and to make your own (if you can etch your own circuit boards...)
+This post will go through how I designed it and how to make your own (if you can etch your own circuit boards...)
 
 ### Design
 
-I've never actually seen a Winkie with my own eyes so the entire design is based on what little info there is online. The most useful source was an episode of Digitiser, where Paul shows a close up of the bottom side. It runs off of two small coin cells, probably LR44s; there's a plastic "ring" conductive corners; assuming 5mm LEDs it appears to be 40x40mm.
+I've never actually seen a Winkie with my own eyes so the entire design is based on what little info there is online. The most useful source was an [episode of Digitiser](https://www.youtube.com/watch?v=bVtuyyX0Aeg), where Paul shows a close up of the bottom side. It runs off of two small coin cells, probably LR44s;  assuming 5mm LEDs it appears to be 40x40mm; there's a plastic ring that shorts connections on the corners of the board that influence the winking.
 
 From this the Wankie must:
 
@@ -31,9 +30,9 @@ From this the Wankie must:
 
 To achieve this I based my design on a generic 555 timer LED blinker circuit, but using an LMC555 - a low-power CMOS 555 timer that can run on 3V.
 
-For the "randomness" effect, the output pin loops around the whole board with either a ground or 3V connection next to it on each corner. Condutive tabs, made of aluminium foil glued to struts, then short these together when pressed which overrides the outputs influence and lights only one LED. So when you're wearing the badge it occasionally deviates from lighting alternate LEDs every second.
+For the "randomness" effect, the output pin loops around the whole board with either a ground or 3V connection next to it on each corner. Conductive tabs, made of aluminium foil glued to struts, then short these together when pressed which overrides the outputs influence and lights only one LED. So when you're wearing the badge it occasionally deviates from lighting alternate LEDs every second.
 
-The design on the front is based on a cleaned up version of the single sleeve by Ivenne. By using a double-sided circuit board the design and circuit can both etched at the same time.
+The design on the front is based on a cleaned up version of the single sleeve by [Ivenne](https://twitter.com/Ivenne_NL) (the creator of the [CheapShow Magazine](https://www.cheapmag.shop/)). By using a double-sided circuit board the design and circuit can both etched at the same time.
 
 ### PCB Layout
 
@@ -65,7 +64,7 @@ Since it's a bit weird and not so obvious from the layout, I'll go through each 
 
 ![](/images/soldering-1.jpg)
 
-1. Solder the 0 ohm link and the capacitor. If you're using a soldering iron, to make them sit flush to the board you can tin the pads then use some solder wick to make the pad flat. Tack one lead on and solder other lead then reflow the first led again.
+1. Solder the 0 ohm link and the capacitor. If you're using a soldering iron, to make them sit flush to the board you can tin the pads then use some solder wick to make the pad flat. Tack one lead on and solder other lead then reflow the first lead again.
 
 ![](/images/soldering-2.jpg)
 
@@ -78,11 +77,11 @@ Since it's a bit weird and not so obvious from the layout, I'll go through each 
 1. Solder the 555 timer. Tin the pads then tack two diagonal pins then reflow all eight pins.
 
 ![](/images/soldering-4.jpg)  
-6\. Prepare the cell holders' pads by tinning them and using solder wick to make them flat.
+6\. Prepare the pads for the cell holders by tinning them and using solder wick to make them flat.
 
 ![](/images/soldering-5.jpg)
 
-1. Form the cell holders' leads by gently bending them perpendicular to the body with a pair of small pliers/blunt snips. Crop off the excess. Surface mount versions do exist but I couldn't find them - use them if you can!
+1. Form the leads of the cell holders by gently bending them perpendicular to the body with a pair of small pliers/blunt snips. Crop off the excess. Surface mount versions do exist but I couldn't find them - use them if you can!
 
 ![](/images/cell-holder-folded.jpg)  
 8\. Position the cell holder centred with a pair of pliers and flow **lots** of solder on each lead. They'll be under a lot of mechanical strain when the cells are in them!
@@ -95,7 +94,7 @@ Since it's a bit weird and not so obvious from the layout, I'll go through each 
 
 ![](/images/soldering-7.jpg)
 
-1. Form the switch's leads by bending them perpendicular tot he body with a pair of pliers/blunt snips
+1. Form the leads of the switch by bending them perpendicular to the body with a pair of pliers/blunt snips
 
 ![](/images/dip-switch-bend.jpg)  
 12\. Position the switch then tack one end and reflow both sides with a generous amount of solder to make a strong mechanical bond. A dab of super glue on the right side of the switch will also help with this.
@@ -104,15 +103,13 @@ Since it's a bit weird and not so obvious from the layout, I'll go through each 
 
 ![](/images/soldering-8.jpg)
 
-1. Prepare the tabs by cutting the __ from your transparency sheet and cutting four small rectangles of aluminium foil onto a paper towel. The foil bits don't need to be exact - you can crop the edges later with a pair of scissors.  
-   Make a small pool of superglue on the paper towel, then drag the end of each __ through the glue and place it on top of a piece of foil. It should pick it up.
+1. Prepare the struts by cutting them out from your transparency sheet and cutting four small rectangles of aluminium foil onto a paper towel. The foil bits don't need to be exact - you can crop the edges later with a pair of scissors.  
+   Make a small pool of superglue on the paper towel, then drag the end of each struts through the glue and place it on top of a piece of foil. It should pick it up.
 
 ![](/images/tabs.jpg)
 
-1. Attach the __ by placing them into position (where the foil touches the two corner contacts on each side as shown). Then place a bead of superglue in the middle of the __.
+1. Attach the struts by placing them into position (where the foil touches the two corner contacts on each side as shown). Then place a bead of superglue in the middle of the struts and leave to dry.
 
 ![](/images/final-circuit-side.jpg)
 
 You have made your very own Wankie!
-
-If you have any questions or have any issues, please get in touch.
