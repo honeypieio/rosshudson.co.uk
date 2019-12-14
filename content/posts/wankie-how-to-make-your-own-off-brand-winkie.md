@@ -8,27 +8,43 @@ type = "post"
 +++
 On [Ep. 114 of Cheapshow](https://www.thecheapshow.co.uk/ep-114-winkie), Paul and Eli found a bizarre French single promoting a failed electronic pin badge called Winkie. 
 
-I
+It's just a badge that winks a red and green LED
 
-It sounds incredibly dull, but it's really not - I've since become obsessed with it.
+I went and made my own clone. 
+
+I present to you, Wankie:
 
 ![](/images/finished-product.jpg)
 
-If you would like to make your own Wankie you're in luck (if you can etch your own circuit boards).
+This post will go through how I designed it and to make your own (if you can etch your own circuit boards...)
 
-### Circuit Board
+### Design
+
+I've never actually seen a Winkie with my own eyes so the entire design is based on what little info there is online. The most useful source was an episode of Digitiser, where Paul shows a close up of the bottom side. It runs off of two small coin cells, probably LR44s; there's a plastic "ring" conductive corners; assuming 5mm LEDs it appears to be 40x40mm.
+
+From this the Wankie must:
+* Blink two LEDs
+* Be 40x40mm
+* Run off of two LR44 cells
+* Have some "random" influence in the form of conductive tabs on each corner
+
+To achieve this I based my design on a generic 555 timer LED blinker circuit, but using an LMC555 - a low-power CMOS 555 timer that can run on 3V.
+
+For the "randomness" effect, the output pin loops around the whole board with either a ground or 3V connection next to it on each corner. Condutive tabs, made of aluminium foil glued to struts, then short these together when pressed which overrides the outputs influence and lights only one LED. So when you're wearing the badge it occasionally deviates from lighting alternate LEDs every second.
+
+The design on the front is based on a cleaned up version of the single sleeve by Ivenne. By using a double-sided circuit board the design and circuit can both etched at the same time.
+
+### PCB Layout
 
 To make the circuit board, you'll need a double sided piece of laminate, at least 50x50mm.
 
-The link below is a PDF with the layout to scale for an A4 page.
+The link below is a PDF with the front design and circuit layout to scale for an A4 page. It also includes an outline for the struts.
 
 [PCB Layout](https://drive.google.com/file/d/1G-mmLmWoUyeC-S6W-NTwl_hBmtrIUGoF/view?usp=sharing "PCB Layout")
 
 I won't go into detail how to etch boards at home but here's a few tips for photo-etching a double sided board:
 
-* To make sure both sides are aligned properly, leave a leader of about 25mm at the top and bottom of both transparencies. Line both transparencies up whilst holding them flat and taut, then sellotape or staple **each** leader together.
-
-<img of transparency>
+* To make sure both sides are aligned properly, leave a leader of about 25mm at the top and bottom of both transparencies. Line both transparencies up whilst holding them flat and taut, then tape or staple **each** leader together.
 
 * Cut off a small corner of your transparencies and the laminate. This means you can be sure you're exposing it the the same way round on each side, it can be easy to lose track of orientation when flipping the board over and peeling off the protective film.
 
@@ -99,4 +115,4 @@ Since it's a bit weird and not so obvious from the layout, I'll go through each 
 
 You have made your very own Wankie!
 
-If you have any questions or have any issues, please get in touch. 
+If you have any questions or have any issues, please get in touch.
