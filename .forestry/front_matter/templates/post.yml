@@ -14,5 +14,3 @@ fields:
 - type: text
   name: type
   label: Type
-pages:
-- content/posts/wankie-how-to-make-your-own-off-brand-winkie.md
