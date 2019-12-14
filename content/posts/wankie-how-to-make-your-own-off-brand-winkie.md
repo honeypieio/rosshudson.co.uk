@@ -38,45 +38,48 @@ It's a bit unorthodox but it is made out of widely-available, standard parts. He
 
 ### Instructions
 
-I'll assume you have a blank PCB ready to go.
+Since it's a bit weird and not so obvious from the layout, I'll go through each step of construction (I'll assume you have a blank PCB ready to go). 
 
-First off, I apply some PCB varnish to the front - it'll make it last longer. You can use clear nail varnish instead.
-
-Next I solder the large pads for the negative battery contact and the pin back.
+1. Apply some PCB varnish to the front - it'll make it last longer. Clear nail varnish is the same thing. 
+2. Solder the largest pads for the negative cell contacts and the pin back.
 
 ![](/images/soldering-1.jpg)
 
-Then solder the capacitor and 0Ω link. To solder the component flush to the board, tin the pads then use some solder braid to make the pad flat. Then tin your iron and tack one side of the component on and reflow each side.
+3. Solder the 0 ohm link and the capacitor. If you're using a soldering iron, to make them sit flush to the board you can tin the pads then use some solder wick to make the pad flat. Tack one lead on and solder other lead then reflow the first led again.
 
 ![](/images/soldering-2.jpg)
 
-To solder the through hole resistors, crop each lead leaving around 4mm left.
+4. Prepare the resistors by cropping each lead to about 4mm. Then solder them to the board.
 
-![](/images/cropped resistor.jpg)![](/images/soldering-3.jpg)
+![](/images/cropped resistor.jpg)
 
-Solder the 555 timer by tinning the pads and tacking on two diagonal leads and then reflow all eight.  
+![](/images/soldering-3.jpg)
+
+5. Solder the 555 timer. Tin the pads then tack two diagonal pins then reflow all eight pins.
+
+  
   
 ![](/images/soldering-4.jpg)  
-Prepare the cell holders' pads by tinning them and using solder wick to make them flat
+6\. Prepare the cell holders' pads by tinning them and using solder wick to make them flat.
 
 ![](/images/soldering-5.jpg)
 
-Form the leads of the cell holders by bending their leads perpendicular to its side and cropping off prefolded ends.
+7. Form the cell holders' leads by gently bending them perpendicular to the body with a pair of small pliers/blunt snips. Crop off the excess. Surface mount versions do exist but I couldn't find them - use them if you can!
 
 ![](/images/cell-holder-folded.jpg)  
-Position the cell holder centred with a pair of pliers and flow lots of solder on each lead. Mechanical strain
+8\. Position the cell holder centred with a pair of pliers and flow **lots** of solder on each lead. They'll be under a lot of mechanical strain when the cells are in them!
 
 ![](/images/soldering-6.jpg)  
-To make the pin back, crop one of them to about 4mm then tin the flat side of each. Hold them flush together and place your iron on the cropped side. A hot iron will make this much easier!
+9\. To make the pin back, crop one of them to about 4mm then tin the flat side of each. Hold them flush together and place your iron on the cropped side. A hot iron will make this much easier!
 
 ![](/images/pin-back-assembly.jpg)  
-Using a pair of pliers to hold the pin back, reflow the central pad and place the pin back in the centre.
+10\. Using a pair of pliers to hold the pin back, reflow the central pad and place the pin back in the centre.
 
 ![](/images/soldering-7.jpg)
 
-To form the switch, bend its leads perpendicular with a pair of pliers/blunt snips
+11. Form the switch's leads by bending them perpendicular tot he body with a pair of pliers/blunt snips
 
 ![](/images/dip-switch-bend.jpg)  
-Position the switch then tack one end and reflow both sides with a generous amount of solder to make a strong mechanical bond. A dab of super glue on the right side of the switch will also help with this.
+12\. Position the switch then tack one end and reflow both sides with a generous amount of solder to make a strong mechanical bond. A dab of super glue on the right side of the switch will also help with this.
 
 ![](/images/soldering-8.jpg)![](/images/tabs.jpg)![](/images/final-circuit-side.jpg)
