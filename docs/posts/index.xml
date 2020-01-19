@@ -6,10 +6,21 @@
     <description>Recent content in Posts on rosshudson.co.uk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rosshudson.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Imaginary Landscapes: Generative Muzak In The Browser</title>
+      <link>https://rosshudson.co.uk/posts/imaginary-landscapes/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/posts/imaginary-landscapes/</guid>
+      <description>Imaginary Landscapes creates a random, constantly evolving colour and soundscape in your web browser.
+The music it creates isn&amp;rsquo;t of any value on its own - it&amp;rsquo;s not really meant to be directly listened to at all, rather passively consumed.
+For best results play at low volume on headphones or external loudspeakers and add context. Leave it on in the background while you’re doing something else, while on the train, while reading a book, having a conversation.</description>
+    </item>
     
     <item>
       <title>Wankie: How To Make Your Own Off-Brand Winkie</title>
