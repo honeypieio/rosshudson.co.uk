@@ -9,7 +9,7 @@ Imaginary Landscapes creates a random, constantly evolving colour and soundscape
 
 The music it creates isn't of any value on its own - it's not really meant to be directly listened to at all, rather passively consumed.
 
-For best results play at low volume on headphones or external loudspeakers and add context. Leave it on in the background while you’re doing something else, while on the train, while reading a book, having a conversation.
+For best results play at low volume on headphones or external loudspeakers and **add some context**. Leave it on in the background while you’re doing something else, while on the train, while reading a book, having a conversation.
 
 ---
 
