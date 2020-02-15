@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rosshudson.co.uk/posts/coffee-mead/</loc>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rosshudson.co.uk/posts/imaginary-landscapes/</loc>
     <lastmod>2020-01-12T00:00:00+00:00</lastmod>
   </url>
@@ -48,12 +53,12 @@
   
   <url>
     <loc>https://rosshudson.co.uk/</loc>
-    <lastmod>2020-01-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://rosshudson.co.uk/posts/</loc>
-    <lastmod>2020-01-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

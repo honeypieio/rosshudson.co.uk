@@ -6,10 +6,21 @@
     <description>Recent content in Home on rosshudson.co.uk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 12 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rosshudson.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Coffee Mead</title>
+      <link>https://rosshudson.co.uk/posts/coffee-mead/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/posts/coffee-mead/</guid>
+      <description>My recipe for a coffee mead that comes out at about 14%. High alcohol and high caffeine content are always a good mix.
+For me it took about 10 weeks to ferment out, and took another good 2-3 months before it lost its jet fuel tang. Completely rank when I first bottled it but it slowly became really pleasant. Probably more of a winter drink than a summer one.
+Yields 5l (1 UK gallon).</description>
+    </item>
     
     <item>
       <title>Imaginary Landscapes: Generative Muzak In The Browser</title>
