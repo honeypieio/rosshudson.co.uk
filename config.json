@@ -22,11 +22,6 @@
   "menu": {
     "main": [
       {
-        "name": "Twitter",
-        "url": "https://twitter.com/hossrudson",
-        "weight": 2
-      },
-      {
         "name": "Github",
         "url": "https://github.com/honeypieio",
         "weight": 1
