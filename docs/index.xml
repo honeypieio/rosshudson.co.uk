@@ -6,10 +6,20 @@
     <description>Recent content in Home on rosshudson.co.uk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 15 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rosshudson.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DIY Function Generator Project</title>
+      <link>https://rosshudson.co.uk/posts/function-generator/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/posts/function-generator/</guid>
+      <description>Working on electronics without a way of generating signals involves a lot of guesswork and dead ends. Since a proper function generator is a bit out of my price range, I set out to try and create my own specifically for audio and RF projects!
+On the whole the project was a success, although it is far from perfect and there are quite a few things I&amp;rsquo;d like to change and implement in a future version before making the CAD files and firmware publicly available.</description>
+    </item>
     
     <item>
       <title>Coffee Mead</title>
