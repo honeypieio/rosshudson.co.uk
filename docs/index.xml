@@ -6,10 +6,19 @@
     <description>Recent content in Home on rosshudson.co.uk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rosshudson.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Simple USB DAC</title>
+      <link>https://rosshudson.co.uk/posts/simple-usb-dac/</link>
+      <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/posts/simple-usb-dac/</guid>
+      <description>I was looking for a way to stream audio over my home network so I could play music on my stereo from my phone/computer wirelessly - it turns out what I was looking for was quite expensive. So I decided to attempt to make something more affordable and that met my needs exactly. My idea was to make a standalone USB DAC that could be used to drive a line level input and high impedance headphones using one USB connection for power and audio data.</description>
+    </item>
     
     <item>
       <title>DIY Function Generator Project</title>

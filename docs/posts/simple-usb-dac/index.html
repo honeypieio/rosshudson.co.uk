@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		
+
+		<title>Simple USB DAC</title>
+
+		
+		<link rel="stylesheet" href="https://rosshudson.co.uk/css/colors-ubuntu.min.24edea0841bcaad930a874a4d265e12dc1997fe3f58686a88b4071793766a106.css">
+    <link rel="stylesheet" href="https://rosshudson.co.uk/css/hybrid.css">
+		<link rel="stylesheet" href="https://rosshudson.co.uk/css/style.css">
+		
+    
+	</head>
+	<body>
+		<header id="header">
+			<h1><a href="https://rosshudson.co.uk/">rosshudson.co.uk</a></h1>
+			<p>A place for stuff to be</p>
+		</header>
+
+		<div id="page">
+			<div id="sidebar">
+				<nav>
+	
+		<ul class="nav">
+			
+				<li><a href="https://github.com/honeypieio"><span>Github</span></a></li>
+			
+				<li><a href="/contact"><span>Contact</span></a></li>
+			
+				<li><a href="https://talking-heads.rosshudson.co.uk"><span>Talking Heads Chords</span></a></li>
+			
+				<li><a href="https://imaginary-landscapes.rosshudson.co.uk"><span>Imaginary Landscapes</span></a></li>
+			
+		</ul>
+	
+</nav>
+
+			</div>
+
+			<div id="content">
+				
+	<article class="post">
+		<h1><a href="https://rosshudson.co.uk/posts/simple-usb-dac/">Simple USB DAC</a> </h1>
+
+		<div class="post-content">
+
+<p>I was looking for a way to stream audio over my home network so I could play music on my stereo from my phone/computer wirelessly - it turns out what I was looking for was quite expensive. So I decided to attempt to make something more affordable and that met my needs exactly. My idea was to make a standalone USB DAC that could be used to drive a line level input and high impedance headphones using one USB connection for power and audio data. The completed unit could then be used as an independent headphone amplifier and/or streamer when combined with a Raspberry Pi running <a href="https://mopidy.com/ext/spotify/">Mopidy</a></p>
+
+<p><img src="/posts/simple-usb-dac/images/completed-project.jpg" alt="Photo of finished project" /></p>
+
+<p>Unfortunately I won&rsquo;t be properly releasing the CAD files since I made a mistake reading a datasheet which resulted in most of the circuitry being redundant and over-engineered (details below). I do hope to eventually return to this project at some point in the future but for now I&rsquo;ll just write this article as a reminder to always triple check datasheets before commiting designs to solder!</p>
+
+<p><img src="/posts/simple-usb-dac/images/pcb.png" alt="PCB" /></p>
+
+<h2 id="usb-interface">USB Interface</h2>
+
+<p>I&rsquo;ve never made something that interfaces with USB data lines so I did a bit of research to find out more.  I based my design on some guidance from an <a href="https://www.silabs.com/documents/public/application-notes/an0046-efm32-usb-hardware-design-guidelines.pdf">application note from Silicon Labs</a></p>
+
+<p>Since the USB Audio Class 2.0 standard uses the lower 1.5Mbps transfer rate (I think?) I elected to disregard the effect of the characteristic impedance of the PCB traces. I used 22R termination resistors on the data lines as well as a 1k pullup on the D+ line. I copied the filter from the application note to limit noise on getting into the DAC&rsquo;s power rails. I replaced the ferrite bead with an equal value hand-wound inductor (100uH = 42 turns on an FT37-61) - this is not ideal but better than nothing!</p>
+
+<p>I&rsquo;m not sure how necassary this is or how critical the values of components are but I&rsquo;d rather err on the side of caution</p>
+
+<h2 id="dac">DAC</h2>
+
+<p>After some further reading into the USB Audio Class 2.0 standard I soon found out I was well out of my depth. So I cheated and used an off the shelf USB DAC chip - the <a href="https://www.ti.com/lit/ds/symlink/pcm2704c.pdf">PCM2704C</a>. It directly takes the USB data lines outputs an analogue signal. The DAC itself can operate up to 16-bit @ 48kHz stereo which is good enough for my ears</p>
+
+<p>All of its support circuitry is connected as per the datasheet, using good quality film bypass capacitors as recommended</p>
+
+<p><img src="/posts/simple-usb-dac/images/schematic.png" alt="Schematic diagram" /></p>
+
+<h2 id="output-stage">Output Stage</h2>
+
+<p>A 10k potentiomter along with a 100R current limiting resistor is placed across the output of the DAC to control the volume. The output of the potentiometer is buffered with an <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf">MCP6004</a> quad opamp to get rid of any loading effects. The line level signal is taken directly from the output of the opamp and its DC offset removed using a good quality film capacitor</p>
+
+<p><img src="/posts/simple-usb-dac/images/calcs1.jpg" alt="Line output coupling capacitor and headphone power calculations" /></p>
+
+<p><img src="/posts/simple-usb-dac/images/calcs2.jpg" alt="Headphone output coupling capacitor calculation" /></p>
+
+<p>The opamp can only deliver up to 12mA, so I made a darlington pair with two 2N3904 BJTs to bump up the current capability of the headphone output. I put the darlington pair in the feedback path of the opamp in an attempt to reduce any distortion caused by uneven current gain (hfe) between the transistors. To remove the DC offset from the audio signal I used a high quality electrolytic coupling capacitor. A higher value coupling capacitor was needed to maintain the same bass response as the line level output</p>
+
+<p>The output voltage directly from the DAC should be good enough to drive up to 100R headphones - <em>or so I thought</em>.</p>
+
+<p><strong>I made a big mistake when reading the datasheet</strong>. The DAC&rsquo;s output amplitude is quoted as 0.55Vcc - this is the internal regulated Vcc of 3.3V, and not the 5V Vbus. So the output amplitude is actually around 1.8Vpp. I didn&rsquo;t notice this until I put the board together and measured the output level&hellip;</p>
+
+<h2 id="improvements">Improvements</h2>
+
+<p>If I were to redo this project, I would add a voltage gain stage and use a rail-to-rail opamp in order to drive the headphone output up to 4.75Vpp. As it is it has no problem driving the line level output and normal 32R headphones but it renders most of the circuitry pointless! I&rsquo;d also look to remove the DC offset of the DAC&rsquo;s output without use of capacitors in the signal path</p>
+
+<p>Another project that could be spun off from this would be to make a standalone line level USB DAC daughter board for a Raspberry Pi. The current design could be easily simplified down to just the USB DAC chip and its supporting circuitry. Although having said that a higher quality SPI or I2C DAC would probably be more suited to this application</p>
+</div>
+
+		<p class="meta">Posted on <span class="postdate">23. November 2020</span></p>
+	</article>
+
+			</div>
+
+			<footer id="footer">
+				<p class="copyright">Here's another clue for you all - the walrus was Paul</p>
+			</footer>
+		</div>
+
+		
+	</body>
+</html>

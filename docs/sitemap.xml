@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rosshudson.co.uk/posts/simple-usb-dac/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rosshudson.co.uk/posts/function-generator/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
   </url>
@@ -58,12 +63,12 @@
   
   <url>
     <loc>https://rosshudson.co.uk/</loc>
-    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://rosshudson.co.uk/posts/</loc>
-    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
