@@ -1,17 +1,15 @@
 +++
-title = "Homebrew Low Power 14MHz Morse Transceiver"
-description = "A prototype of a portable QRP CW transceiver for the 20m amateur band using discrete components"
+title = "Homebrew 20m QRP CW Transceiver (Part #1)"
+description = "A prototype of a portable QRP CW transceiver for the 14MHz amateur band using discrete components"
 date = "2021-01-18"
 type = "post"
 +++
 
-Document the fruits of my first proper attempt at designing a transceiver
-
-I should make clear that this isn't meant to be a guide on how to design a transceiver - I'm not an expert and this is only for fun. What I'm doing here is sharing a few methods for designing radio circuits that I've found work for me. Your mileage may vary!
+This post documents the fruits of my first proper attempt at designing a full transceiver from scratch. I should make clear that this isn't meant to be a guide on how to design a transceiver - I'm not an expert and this is only for fun. All I'm doing here is sharing a few methods for designing radio circuits that work for me and that I can understand. Your mileage may vary!
 
 ![Collage of working prototype](/posts/20m-qrp-rig-prototype/images/prototype-collage.png)
 
-Update 20/04/2021: a compact double-sided PCB of this design is coming soon...
+Update 20/04/2021: a PCB based on this design is coming soon...
 
 ![PCB](/posts/20m-qrp-rig-prototype/images/new-pcb.jpg)
 
@@ -27,9 +25,9 @@ I have never been able to get a proper analogue VFO to work properly so I decide
 
 ## Acknowledgements
 
-A lot of my approach to designing RF circuits is informed by these two books: Solid State Design for the Radio Amateur () and Experimental Methods in RF Design ()
+A lot of my approach to designing RF circuits is informed by the book [Solid State Design for the Radio Amateur](https://archive.org/details/SolidStateDesignForTheRadioAmateur1986)
 
-Peter Parker (VK3YE), Pete Juliano (N6QW) and Charlie Morris (ZL2CTM) all make really insightful content about their homebrew experiments which have helped me immensely!
+[Peter Parker (VK3YE)](https://vk3ye.com/), [Pete Juliano (N6QW)](https://www.n6qw.com/) and [Charlie Morris (ZL2CTM)](https://zl2ctm.blogspot.com/) all make really insightful content about their homebrew experiments which have helped me immensely!
 
 ### Useful sites
 
@@ -60,7 +58,7 @@ My method for calculating the component values is a mix of ideas and techniques 
 
 I've made a spreasheet calculator to make it easier to play around with different parameters, which you can download here:
 
-[Cascode Common-Emitter Amplifier Stage Calculator](assets/) 
+[Cascode Common-Emitter Amplifier Stage Calculator](/posts/20m-qrp-rig-prototype/calculators/cascode-common-emitter-amplifier-calculator.ods) 
 
 I split the calculated emitter resitance across two resistors with a capacitor between them to ground to provide some negative feedback at frequency. Using a 1k trimpot for RE1 allows the gain to be set on the fly. With the timmer at 0R, the total current through the transistors (at DC) is around 80mA (12V / 147R) which is well within their current rating
 
@@ -72,7 +70,7 @@ Toroidal impedance matching transformers are used throughout this radio to coupl
 
 For T1 we want to "transform" the 50R output of the bandpass filter to the 370R input of the amplifier. This gives a turns ratio of 2.7 which is then used to find integer pairs that (roughly) match this ratio e.g, 4 * 2.7 = 10.8 ≈ 4:11
 
-I use the following rule of thumb: the reactance of the coil should be at least 4 times greater than the impedance you want to match, i.e. Z = 50 ∴ XL >= 200. I'm not sure why this is the case but the transformers perform much better than having their inductive reactance closer to the actual impedance you want to match
+I use the following rule of thumb: the reactance of the coil should be at least 4 times greater than the impedance you want to match, i.e. Z = 50 ∴ XL >= 200. I'm not sure why this is the case but they do perform much better when compared to having the inductive reactance closer to the actual impedance you want to match
 
 I use [toroids.info](https://toroids.info/) to calculate the inductive reactance of the coil by selecting the type of toroid, the number of turns and the frequency of operation (which in this case is 14MHz). If the reactance is less than 4 times the impedance you want to match go up to the next highest turns ratio 
 
@@ -82,7 +80,7 @@ It's advantageous to use the least number of turns possible. Having a few differ
 
 ### Amplifiers
 
-I opted to use single transistor common-emitter amplifiers for the IF stage
+I opted to use single transistor common-emitter amplifiers for the IF stage as I know this type of circuit can to operate comfortably at 6MHz
 
 ![IF amplifier schematics](/posts/20m-qrp-rig-prototype/images/if-amplifiers.jpg)
 
@@ -90,7 +88,7 @@ The component values are similar to the RF frontend amplifier since the calculat
 
 I've made another spreasheet calculator for this circuit, which you can download here:
 
-[Common-Emitter Amplifier Stage Calculator](assets/) 
+[Common-Emitter Amplifier Stage Calculator](/posts/20m-qrp-rig-prototype/calculators/common-emitter-amplifier-calculator.ods) 
 
 Both IF amplifiers are identical except for their matching transformers which need to match different input and output impedances 
 
@@ -98,13 +96,15 @@ Both IF amplifiers are identical except for their matching transformers which ne
 
 ### Xtal Filter
 
-I used a method by Pete Juliano () to make the xtal ladder filter. I can't find where this was published but I have drawn the schematic out on a piece of paper with his callsign on it so it must be his. I have found that the more effort I put into making a filter the worse it performs. This method is really easy and it works just fine for me
+I used a method by Pete Juliano (N6QW) to make the xtal ladder filter. I can't find where this was published but I have drawn the schematic out on a piece of paper with his callsign on it so it must be his. I have found that the more effort I put into making a filter the worse it performs. This method is really easy and it works just fine for me
 
-The idea is that if you get four xtals with series resonance frequencies that are within 50Hz of eachother, plugging them into the circuit below should give you a reasonable filter for CW. The narrower the bandwidth the better but up to 750Hz is good enough
+The idea is that if you get four xtals with series resonance frequencies that are within 50Hz of eachother, plugging them into the circuit below should give you a reasonable filter for CW with an input and output impedance of roughly 170R. In this case my filter ended up with a bandwidth of 500Hz. The narrower the bandwidth the better but anything below 750Hz should be good enough
 
 ![Xtal ladder filter schematic](/posts/20m-qrp-rig-prototype/images/xtal-ladder-filter.jpg)
 
-I matched my crystals using a NanoVNA by connecting the input to one leg and output to the other leg - the series resonant frequency is the first peak. This doesn't account for the mismatched impedance between the xtal and the NanoVNA but I found that it works just as well as more complex methods, such as the one outlined in ["Crystal Ladder Filters for All"](https://www.arrl.org/files/file/QEX_Next_Issue/Nov-Dec_2009/QEX_Nov-Dec_09_Feature.pdf)
+I matched my crystals using a NanoVNA by connecting the input to one leg and output to the other leg - the series resonant frequency is the first peak. This doesn't account for the mismatched impedance between the xtal and the NanoVNA but I found that it works just as well as more complex methods, such as the one outlined in ["Crystal Ladder Filters for All"](https://www.arrl.org/files/file/QEX_Next_Issue/Nov-Dec_2009/QEX_Nov-Dec_09_Feature.pdf) by Horst Steder (DJ6EV) and Jack A. Hardcastle (G3JIR)
+
+A great benefit of using a digital VFO is that you can very easily offset the LO and BFO frequencies if the resonant frequency of the xtal filter is slightly off from the desired IF
 
 ### Audio Amplifier
 
@@ -118,15 +118,15 @@ The AF amplifier is based on a TL072 dual opamp and designed to drive headphones
 
 A class E power amplifier is potentially incredibly efficient (theoretically up to 99%!) but is difficult to get right. My calculations were taken from ["Notes on designing class-E RF power amplifiers"](https://www.researchgate.net/publication/320623200_Notes_on_designing_Class-E_RF_power_amplifiers) by Bill Slade, which I have put into a spreadsheet calculator can download here:
 
-[Class E Power Amplifier Calculator](assets/) 
+[Class E Power Amplifier Calculator](/posts/20m-qrp-rig-prototype/calculators/class-e-power-amplifier-calculator.ods) 
 
 ![Class E RF power amplifier schematic](/posts/20m-qrp-rig-prototype/images/class-e-rf-amp.jpg)
 
-The schematic shown is combined with the lowpass filter described below. The totem pole driver was taken from a design by Charlie Morris (ZL2CTM) in order to drive the MOSFET's gate harder. It should be noted that the base current limiting resistor (R3) limits the effective bandwidth of the driver as it forms a lowpass filter with the input capacitance of the BJTs (roughly 8pF in the case of the 2N3904/6). There are also two bypass capacitors across the 12V rail that are not shown. Interestingly, in simulation this circuit outputs mW but in real life it outputs 6W... 
+The schematic shown is combined with the lowpass filter described below. From the calculator: Ltotal = L2, RFC = L1, Cmatch = C2, Cres = C3 and Cparallel = C1. The totem pole driver was taken from a design by Charlie Morris (ZL2CTM) in order to drive the MOSFET with the Si5351. It should be noted that the base current limiting resistor (R3) limits the effective bandwidth of the driver as it forms a lowpass filter with the input capacitance of the BJTs (roughly 8pF in this case). There are also two bypass capacitors across the 12V rail that are not shown. Interestingly, while this circuit performs as expected in real life the simulation only outputs uW...
 
 ### Output Lowpass Filter
 
-For the output filter I used a simple half-wave lowpass filter with a cut-off frequency of 15MHz. I found the values of C1, C3, L1 and L2 by setting their reactance to 50R at the desired cut-off frequency. C2 was then found by to setting its rectance 25R at the cut-off frequency 
+For the output filter I used a simple half-wave lowpass filter with a cut-off frequency of 15MHz. I found the values of C1, C3, L1 and L2 by setting their reactance to 50R at the desired cut-off frequency. C2 was then found by to setting its reactance 25R at the cut-off frequency 
 
 ![RF output low-pass filter schematic and calculations](/posts/20m-qrp-rig-prototype/images/rf-output-lpf.jpg)
 
@@ -146,7 +146,7 @@ The keying stage is handled by the firmware. When the key is closed it triggers 
 
 4. Power relay is activated
 
-After one secondhas passed without a key press, the opposite of each action is performed in reverse order (i.e. 4, 3, 2, 1)
+After one second has passed without a key press, the opposite of each action is performed in reverse order (i.e. 4, 3, 2, 1) and the transceiver re-enters its receiving state
 
 ## Firmware
 
