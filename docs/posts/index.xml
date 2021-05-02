@@ -6,10 +6,19 @@
     <description>Recent content in Posts on rosshudson.co.uk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rosshudson.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Homebrew 20m QRP CW Transceiver (Part #1)</title>
+      <link>https://rosshudson.co.uk/posts/20m-qrp-rig-prototype/</link>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosshudson.co.uk/posts/20m-qrp-rig-prototype/</guid>
+      <description>This post documents the fruits of my first proper attempt at designing a full transceiver from scratch. I should make clear that this isn&amp;rsquo;t meant to be a guide on how to design a transceiver - I&amp;rsquo;m not an expert and this is only for fun. All I&amp;rsquo;m doing here is sharing a few methods for designing radio circuits that work for me and that I can understand. Your mileage may vary!</description>
+    </item>
     
     <item>
       <title>Simple USB DAC</title>
