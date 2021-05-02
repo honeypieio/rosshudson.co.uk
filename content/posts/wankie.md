@@ -1,7 +1,7 @@
 +++
 date = 2019-12-14T00:00:00Z
 description = "PCB layouts and instructions for making your very own off-brand Winkie."
-title = "Wankie: How To Make Your Own Off-Brand Winkie"
+title = "How To Make Your Own Off-Brand Winkie"
 type = "post"
 
 +++
